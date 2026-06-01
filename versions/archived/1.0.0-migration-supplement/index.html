@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>v1.0.0-Migration-supplement - dans-bagit-profile</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "v1.0.0-Migration-supplement";
+        var mkdocs_page_input_path = "versions/archived/1.0.0-migration-supplement.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> dans-bagit-profile
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Welcome</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Current versions</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../1.3.0/">v1.3.0</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../0.0.0/">v0.0.0-DEPRECATED</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Archived versions</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../1.2.0/">v1.2.0</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.1.0/">v1.1.0</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.0.0/">v1.0.0</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">v1.0.0-Migration-supplement</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#version">Version</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#status">Status</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scope">Scope</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#overview-and-conventions">Overview and conventions</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#xml-namespaces">XML namespaces</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#2-structural-requirements">2 Structural requirements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-metadata-requirements">3 Metadata requirements</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#31-metadatadatasetxml">3.1 metadata/dataset.xml</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#34-migration-only-metadata">3.4 Migration-only metadata</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#section-4-data-station-context-requirements">Section 4 Data Station context requirements</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#references">References</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Context</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../context/">About</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">dans-bagit-profile</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Archived versions</li>
+      <li class="breadcrumb-item active">v1.0.0-Migration-supplement</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/DANS-KNAW/dans-bagit-profile/edit/master/docs/versions/archived/1.0.0-migration-supplement.md">Edit on DANS-KNAW/dans-bagit-profile</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="dans-bagit-profile-v100-migration-supplement">DANS BagIt Profile v1.0.0 - Migration Supplement<a class="headerlink" href="#dans-bagit-profile-v100-migration-supplement" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<h3 id="version">Version<a class="headerlink" href="#version" title="Permanent link">&para;</a></h3>
+<ul>
+<li>See <a href="../1.0.0/">DANS BagIt Profile v1</a></li>
+</ul>
+<h3 id="status">Status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h3>
+<ul>
+<li>INTERNAL</li>
+</ul>
+<h3 id="scope">Scope<a class="headerlink" href="#scope" title="Permanent link">&para;</a></h3>
+<p>This document supplements <a href="../1.0.0/">DANS BagIt Profile v1</a> by modifying its rules for bags used to migrate datasets from EASY to a Data Station. Clients of the Data
+Station SWORD2 service can ignore this document.</p>
+<h3 id="overview-and-conventions">Overview and conventions<a class="headerlink" href="#overview-and-conventions" title="Permanent link">&para;</a></h3>
+<h4 id="xml-namespaces">XML namespaces<a class="headerlink" href="#xml-namespaces" title="Permanent link">&para;</a></h4>
+<p>Extra namespaces used:</p>
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>Namespace URI</th>
+<th>Namespace documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>am</code></td>
+<td><code>http://easy.dans.knaw.nl/schemas/bag/metadata/agreements/</code></td>
+<td><a href="https://raw.githubusercontent.com/DANS-KNAW/dans-schema/master/lib/src/main/resources/bag/metadata/agreements/agreements.xsd" target="_blank">DANS deposit agreement metadata</a></td>
+</tr>
+<tr>
+<td><code>amd</code></td>
+<td><code>http://easy.dans.knaw.nl/easy/dataset-administrative-metadata/</code></td>
+<td><a href="https://raw.githubusercontent.com/DANS-KNAW/dans-schema/master/lib/src/main/resources/bag/metadata/amd/amd.xsd" target="_blank">DANS administrative metadata</a></td>
+</tr>
+<tr>
+<td><code>emd</code></td>
+<td><code>http://easy.dans.knaw.nl/easy/easymetadata/</code></td>
+<td><a href="https://easy.dans.knaw.nl/schemas/md/emd/emd.xsd" target="_blank">DANS EASY metadata schema</a></td>
+</tr>
+<tr>
+<td><code>prov</code></td>
+<td><code>http://easy.dans.knaw.nl/schemas/bag/metadata/prov/</code></td>
+<td><a href="https://easy.dans.knaw.nl/schemas/bag/metadata/prov/provenance.xsd" target="_blank">DANS provenance metadata schema</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
+<h3 id="2-structural-requirements">2 Structural requirements<a class="headerlink" href="#2-structural-requirements" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>2.2-MIGRATION</strong>:  Additionally, the <code>metadata</code> directory MAY contain the files <code>metadata/amd.xml</code>, <code>metadata/emd.xml</code>, <code>metadata/provenance.xml</code>,
+  <code>metadata/depositor-info/agreements.xml</code>, <code>metadata/depositor-info/depositor-agreement.pdf</code>, <code>metadata/depositor-info/depositor-agreement.txt</code>, 
+  <code>metadata/depositor-info/message-from-depositor.txt</code>, <code>metadata/license.html</code>, <code>metadata/license.txt</code>, <code>metadata/license.pdf</code>, <code>metadata/original/dataset.xml</code>, 
+  <code>metadata/original/files.xml</code>.</li>
+</ul>
+<h3 id="3-metadata-requirements">3 Metadata requirements<a class="headerlink" href="#3-metadata-requirements" title="Permanent link">&para;</a></h3>
+<h4 id="31-metadatadatasetxml">3.1 <code>metadata/dataset.xml</code><a class="headerlink" href="#31-metadatadatasetxml" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>3.1.9-MIGRATION</strong>: Alternatively, <code>dcmiMetadata/dcx-dai:contributorDetails/dcx-dai:author</code>
+  and <code>dcmiMetadata/dcx-dai:contributorDetails/dcx-dai:organization</code> elements MAY specify the rights holder using the role <code>RightsHolder</code>.</p>
+</li>
+<li>
+<p><strong>3.1.11</strong>: Rule does not apply to migration.</p>
+</li>
+</ul>
+<h4 id="34-migration-only-metadata">3.4 Migration-only metadata<a class="headerlink" href="#34-migration-only-metadata" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>3.4.1-MIGRATION</strong>: The file <code>metadata/depositor-info/agreements.xml</code> MUST adhere to <a href="https://raw.githubusercontent.com/DANS-KNAW/dans-schema/master/lib/src/main/resources/bag/metadata/agreements/agreements.xsd" target="_blank">DANS deposit agreement metadata</a>.</li>
+<li><strong>3.4.2-MIGRATION</strong>: The file <code>metadata/amd.xml</code> is REQUIRED and MUST adhere to <a href="https://raw.githubusercontent.com/DANS-KNAW/dans-schema/master/lib/src/main/resources/bag/metadata/amd/amd.xsd" target="_blank">DANS administrative metadata</a>.</li>
+<li><strong>3.4.3-MIGRATION</strong>: The file <code>metadata/emd.xml</code> is optional. If it is present it MUST adhere to <a href="https://easy.dans.knaw.nl/schemas/md/emd/emd.xsd" target="_blank">DANS EASY metadata schema</a>.</li>
+<li><strong>3.4.4-MIGRATION</strong>: The file <code>metadata/provenance.xml</code> is optional. If it is present it MUST adhere to <a href="https://easy.dans.knaw.nl/schemas/bag/metadata/prov/provenance.xsd" target="_blank">DANS provenance metadata schema</a>.</li>
+</ul>
+<h3 id="section-4-data-station-context-requirements">Section 4 Data Station context requirements<a class="headerlink" href="#section-4-data-station-context-requirements" title="Permanent link">&para;</a></h3>
+<p>Rules do not apply to migration.</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<p>Extra references:</p>
+<ul>
+<li><a href="https://raw.githubusercontent.com/DANS-KNAW/dans-schema/master/lib/src/main/resources/bag/metadata/amd/amd.xsd" target="_blank">DANS administrative metadata</a> - schema for administrative metadata</li>
+<li><a href="https://easy.dans.knaw.nl/schemas/md/emd/emd.xsd" target="_blank">DANS EASY metadata schema</a> - legacy schema for dataset level metadata</li>
+<li><a href="https://easy.dans.knaw.nl/schemas/bag/metadata/prov/provenance.xsd" target="_blank">DANS provenance metadata schema</a> - metadata schema for recording provenance of datasets migrated from
+  DANS EASY</li>
+<li><a href="https://raw.githubusercontent.com/DANS-KNAW/dans-schema/master/lib/src/main/resources/bag/metadata/agreements/agreements.xsd" target="_blank">DANS deposit agreement metadata</a> - schema for metadata about the agreement between DANS and the
+  depositor</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../1.0.0/" class="btn btn-neutral float-left" title="v1.0.0"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../../context/" class="btn btn-neutral float-right" title="About">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/DANS-KNAW/dans-bagit-profile" class="fa fa-code-fork" style="color: #fcfcfc"> DANS-KNAW/dans-bagit-profile</a>
+        </span>
+    
+    
+      <span><a href="../1.0.0/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../../context/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
