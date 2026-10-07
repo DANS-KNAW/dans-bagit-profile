@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>v1.3.0 - dans-bagit-profile</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "v1.3.0";
+        var mkdocs_page_input_path = "versions/1.3.0.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> dans-bagit-profile
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Welcome</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Current versions</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">v1.3.0</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#version">Version</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#status">Status</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#changes">Changes</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#changed-from-version-120-to-130">Changed from version 1.2.0 to 1.3.0</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scope">Scope</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#overview-and-conventions">Overview and conventions</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#keywords">Keywords</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#subdivisions">Subdivisions</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#xml-namespaces">XML namespaces</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#names">Names</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#glossary">Glossary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-bagit-related">1 BagIt related</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#11-validity">1.1 Validity</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#12-bag-infotxt">1.2 bag-info.txt</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#13-manifests">1.3 Manifests</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-structural-requirements">2 Structural requirements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-metadata-requirements">3 Metadata requirements</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#31-metadatadatasetxml">3.1 metadata/dataset.xml</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#32-metadatafilesxml">3.2 metadata/files.xml</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#33-original-filepathstxt">3.3 original-filepaths.txt</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-data-station-context-requirements">4 Data Station context requirements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-vault-as-a-service-context-requirements">5 Vault as a Service context requirements</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#references">References</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../0.0.0/">v0.0.0-DEPRECATED</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Archived versions</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../archived/1.2.0/">v1.2.0</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../archived/1.1.0/">v1.1.0</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../archived/1.0.0/">v1.0.0</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../archived/1.0.0-migration-supplement/">v1.0.0-Migration-supplement</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Context</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../context/">About</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">dans-bagit-profile</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Current versions</li>
+      <li class="breadcrumb-item active">v1.3.0</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/DANS-KNAW/dans-bagit-profile/edit/master/docs/versions/1.3.0.md">Edit on DANS-KNAW/dans-bagit-profile</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="dans-bagit-profile-v130">DANS BagIt Profile v1.3.0<a class="headerlink" href="#dans-bagit-profile-v130" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<h3 id="version">Version<a class="headerlink" href="#version" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Document version: 1.3.0</li>
+<li>Publication date: 2025-10-22</li>
+</ul>
+<h3 id="status">Status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h3>
+<ul>
+<li>PUBLISHED</li>
+</ul>
+<h3 id="changes">Changes<a class="headerlink" href="#changes" title="Permanent link">&para;</a></h3>
+<h4 id="changed-from-version-120-to-130">Changed from version 1.2.0 to 1.3.0<a class="headerlink" href="#changed-from-version-120-to-130" title="Permanent link">&para;</a></h4>
+<p>Added Getty AAT to the controlled vocabularies in rule 3.1.12.</p>
+<h3 id="scope">Scope<a class="headerlink" href="#scope" title="Permanent link">&para;</a></h3>
+<p>This document specifies what constitutes an acceptable DANS bag. This includes all the requirements for a bag to be successfully processed by the ingest
+workflow.</p>
+<p>Versions 1.x.x cover the requirements used by the DANS Data Stations and the Vault as a Service.</p>
+<h3 id="overview-and-conventions">Overview and conventions<a class="headerlink" href="#overview-and-conventions" title="Permanent link">&para;</a></h3>
+<h4 id="keywords">Keywords<a class="headerlink" href="#keywords" title="Permanent link">&para;</a></h4>
+<p>The keywords "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "
+OPTIONAL" in this document are to be interpreted as described in <a href="https://www.ietf.org/rfc/rfc2119.txt" target="_blank">RFC 2119</a>.</p>
+<p>The keyword "SHOULD" is also used to specify requirements that are impossible or impractical to check by the archival
+organization (i.e. DANS). The client should do its best to meet these requirements, but not rely on their being
+validated by the archival organization.</p>
+<h4 id="subdivisions">Subdivisions<a class="headerlink" href="#subdivisions" title="Permanent link">&para;</a></h4>
+<p>The requirements are subdivided into the following sections:</p>
+<ul>
+<li>BagIt-related requirements - requirements that refer back to the BagIt specifications</li>
+<li>Structural requirements - requirements regarding the directories and files in the bag</li>
+<li>Metadata requirements - requirements regarding the metadata files included in the bag</li>
+<li>Data Station context requirements - requirements regarding the Data Station where the dataset is to be created or
+  modified; these do not apply to the Vault as a Service</li>
+<li>Vault as a Service context requirements - requirements that are only applicable to the Vault as a Service and not to the Data Stations </li>
+</ul>
+<p>The sections are numbered and may have numbered subsections. The requirements themselves are stated as numbered rules.
+Rules may have parts that are labeled with letters: (a), (b), (c), etc. To uniquely identify a specific rule, use the
+notation</p>
+<pre class="codehilite"><code>&lt;section-nr&gt;[.&lt;subsection-nr&gt;].&lt;rule-nr&gt; [(&lt;letter&gt;)]
+</code></pre>
+
+<p>Example: <code>2.3.4 (e)</code> means part <strong>e</strong> of the fourth rule in subsection 3 of section 2.</p>
+<h4 id="xml-namespaces">XML namespaces<a class="headerlink" href="#xml-namespaces" title="Permanent link">&para;</a></h4>
+<p>When referring to XML element or attribute names or attribute values that have a prefix (such as <code>dcterms:identifier</code>)
+an element in a certain namespace is intended. The table below lists the mapping from prefix to namespace. In the actual
+document, the namespace may be bound to a different prefix, or be the default namespace.</p>
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>Namespace URI</th>
+<th>Namespace documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dc</code></td>
+<td><code>http://purl.org/dc/elements/1.1/</code></td>
+<td><a href="http://purl.org/dc/elements/1.1/" target="_blank">DC</a></td>
+</tr>
+<tr>
+<td><code>dcterms</code></td>
+<td><code>http://purl.org/dc/terms/</code></td>
+<td><a href="http://www.dublincore.org/documents/dcmi-terms/" target="_blank">DCTERMS</a></td>
+</tr>
+<tr>
+<td><code>dcx-dai</code></td>
+<td><code>http://easy.dans.knaw.nl/schemas/dcx/dai/</code></td>
+<td><a href="https://raw.githubusercontent.com/DANS-KNAW/dans-schema/master/lib/src/main/resources/dcx/dcx-dai.xsd" target="_blank">DANS DCTERMS extension: Digital Author Identifier</a></td>
+</tr>
+<tr>
+<td><code>dcx-gml</code></td>
+<td><code>http://easy.dans.knaw.nl/schemas/dcx/gml/</code></td>
+<td><a href="https://raw.githubusercontent.com/DANS-KNAW/dans-schema/master/lib/src/main/resources/dcx/dcx-gml.xsd" target="_blank">DANS DCTERMS extension: Geography Markup Language</a></td>
+</tr>
+<tr>
+<td><code>ddm</code></td>
+<td><code>http://schemas.dans.knaw.nl/dataset/ddm-v2/</code></td>
+<td><a href="https://raw.githubusercontent.com/DANS-KNAW/dans-schema/master/lib/src/main/resources/md/ddm/v2/ddm.xsd" target="_blank">DANS dataset metadata schema</a></td>
+</tr>
+<tr>
+<td><code>files</code></td>
+<td><code>http://easy.dans.knaw.nl/schemas/bag/metadata/files/</code></td>
+<td><a href="https://raw.githubusercontent.com/DANS-KNAW/dans-schema/master/lib/src/main/resources/bag/metadata/files/files.xsd" target="_blank">DANS bag file metadata schema</a></td>
+</tr>
+<tr>
+<td><code>gml</code></td>
+<td><code>http://www.opengis.net/gml</code></td>
+<td><a href="https://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsf.xsd" target="_blank">GML 3.1.1 Simplified Features profile Levels 0 and 1</a></td>
+</tr>
+<tr>
+<td><code>id-type</code></td>
+<td><code>http://easy.dans.knaw.nl/schemas/vocab/identifier-type/</code></td>
+<td><a href="https://raw.githubusercontent.com/DANS-KNAW/dans-schema/master/lib/src/main/resources/vocab/identifier-type.xsd" target="_blank">DANS controlled list of dcterms:identifier types</a></td>
+</tr>
+<tr>
+<td><code>xsi</code></td>
+<td><code>http://www.w3.org/2001/XMLSchema-instance</code></td>
+<td><a href="https://www.w3.org/TR/xmlschema-1/" target="_blank">XML Schema</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="names">Names<a class="headerlink" href="#names" title="Permanent link">&para;</a></h4>
+<p>Exact names are specified in <code>code</code> style. The capitalization of those names must be exactly as specified, unless it is
+explicitly stated that the name is case-insensitive. If the name is a file path it is relative to the bag base
+directory.</p>
+<h2 id="glossary">Glossary<a class="headerlink" href="#glossary" title="Permanent link">&para;</a></h2>
+<p>This section defines a number of terms that may be useful when discussing this specification. Several of these terms are
+used in the <a href="#requirements">Requirements</a> section of this document. Where terms are used in the definitions of other
+terms, they are printed in <em>italics</em>.</p>
+<ul>
+<li>
+<p><strong>bag</strong>: a data package conforming to the <a href="https://www.rfc-editor.org/rfc/rfc8493" target="_blank">BagIt</a> specifications.</p>
+</li>
+<li>
+<p><strong>bag-ID</strong>: a <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier" target="_blank">urn:uuid</a> given to every deposit upon delivery to DANS. The bag-ID of the first version
+  of a dataset is also known as the <em>sword token</em>.</p>
+</li>
+<li>
+<p><strong>(version N) DANS-bag</strong>: a <em>bag</em> that also conforms to (version N) of the DANS BagIt Profile specifications.</p>
+</li>
+<li>
+<p><strong>DANS Data Station</strong>: the publishing and archiving service of DANS for datasets</p>
+</li>
+<li>
+<p><strong>Vault as a Service</strong>: the service that allows customers to store datasets in the DANS Data Vault, without publishing
+  them in a Data Station</p>
+</li>
+<li>
+<p><strong>DANS SWORD Service</strong>: the DANS implementation of the <a href="https://sword.cottagelabs.com/previous-versions-of-sword/sword-v2/sword-v2-specifications/" target="_blank">SWORDv2</a> protocol</p>
+</li>
+<li>
+<p><strong>dataset</strong>: an information package containing data and metadata published in a <em>DANS Data Station</em>. A dataset may
+  have multiple versions.</p>
+</li>
+<li>
+<p><strong>deposit</strong>: a package containing data and metadata sent to DANS by the <em>depositor</em> to create a new dataset or dataset
+  version.</p>
+</li>
+<li>
+<p><strong>depositor</strong>: the agent sending data to DANS for publishing in a <em>DANS Data Station</em>. This term corresponds to the
+  Producer in the <a href="https://public.ccsds.org/pubs/650x0m2.pdf" target="_blank">OAIS Reference Model</a>.</p>
+</li>
+<li>
+<p><strong>deaccessioned version</strong>: a dataset that is present in a <em>DANS Data Station</em>, but no longer disseminated. To the
+  external user the dataset version appears to be deleted, only a tombstone remains.</p>
+</li>
+<li>
+<p><strong>update-deposit</strong>: a <em>deposit</em> that is intended to create a new version of an existing <em>dataset</em>.</p>
+</li>
+<li>
+<p><strong>version-bag-ID</strong>: a <em>bag-ID</em> that references a <em>version</em> of a <em>dataset</em>. If the <em>dataset</em> consists of several
+  <em>versions</em>, the DOI resolves to the most recent of those <em>version</em><hidden>s. All versions of one dataset have the
+  same <em>sword token</em>.</p>
+</li>
+<li>
+<p><strong>sword token</strong>: a <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier" target="_blank">urn:uuid</a> assigned to first version bags upon submission through the
+  <em>DANS SWORD Service</em>. This UUID is used when depositing an <em>update-deposit</em> and to identify all versions of one
+  dataset.</p>
+</li>
+</ul>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
+<h3 id="1-bagit-related">1 BagIt related<a class="headerlink" href="#1-bagit-related" title="Permanent link">&para;</a></h3>
+<h4 id="11-validity">1.1 Validity<a class="headerlink" href="#11-validity" title="Permanent link">&para;</a></h4>
+<ol>
+<li>The bag MUST be valid according to the <a href="https://www.rfc-editor.org/rfc/rfc8493" target="_blank">BagIt</a> specifications v1.0 (RFC 8493).</li>
+</ol>
+<h4 id="12-bag-infotxt">1.2 <code>bag-info.txt</code><a class="headerlink" href="#12-bag-infotxt" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>The bag MUST contain a <code>bag-info.txt</code> file.</p>
+</li>
+<li>
+<p>The <code>bag-info.txt</code> file MAY contain one or more elements called <code>Created</code>. This element, when present, is ignored. The only reason to allow it is for 
+   backwards compatibility with v1.0.0 of the DANS BagIt Profile.</p>
+</li>
+<li>
+<p>(a) The <code>bag-info.txt</code> file MAY contain at most one element called <code>Is-Version-Of</code> (b) with a
+   <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier" target="_blank">urn:uuid</a>-value. See rules 4.1 and 5.1 for the context requirements if <code>Is-Version-Of</code> is provided.</p>
+</li>
+<li>
+<p>(a) The <code>bag-info.txt</code> file MAY contain at most one element called <code>Has-Organizational-Identifier</code>. (b) If this <code>Has-Organizational-Identifier</code> is given,
+   at most one <code>Has-Organizational-Identifier-Version</code> MAY be present, containing a version number. (c) If <code>Has-Organizational-Identifier</code> is present
+   then its value MUST start with one of the approved prefixes. Each client will be assigned a unique prefix to use for this purpose.</p>
+</li>
+</ol>
+<h4 id="13-manifests">1.3 Manifests<a class="headerlink" href="#13-manifests" title="Permanent link">&para;</a></h4>
+<ol>
+<li>If the bag has only one payload manifest it MUST NOT use the MD5 algorithm. However, it MAY have an MD5 payload manifest in addition to other payload
+   manifests.</li>
+</ol>
+<h3 id="2-structural-requirements">2 Structural requirements<a class="headerlink" href="#2-structural-requirements" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>The bag MUST have a tag-directory called <code>metadata</code> directly under the bag base directory.</p>
+</li>
+<li>
+<p>The <code>metadata</code> directory MUST contain the files: (a) <code>metadata/dataset.xml</code> and (b) <code>metadata/files.xml</code>.</p>
+</li>
+<li>
+<p>The <code>metadata</code> directory MUST NOT contain any other files or directories.</p>
+</li>
+<li>
+<p>A DANS bag MAY contain a file <code>original-filepaths.txt</code> in the root of the bag in UTF-8 encoding. For the content requirements
+   and purpose of this file, if it exists, see Section 3.3.</p>
+</li>
+</ol>
+<h3 id="3-metadata-requirements">3 Metadata requirements<a class="headerlink" href="#3-metadata-requirements" title="Permanent link">&para;</a></h3>
+<h4 id="31-metadatadatasetxml">3.1 <code>metadata/dataset.xml</code><a class="headerlink" href="#31-metadatadatasetxml" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>The file <code>metadata/dataset.xml</code> MUST adhere to <a href="https://raw.githubusercontent.com/DANS-KNAW/dans-schema/master/lib/src/main/resources/md/ddm/v2/ddm.xsd" target="_blank">DANS dataset metadata schema</a>.</p>
+</li>
+<li>
+<p>The file <code>metadata/dataset.xml</code> MUST have at least one <code>dcterms:license</code> element as a child of the <code>dcmiMetadata</code> element. Exactly one of these elements MUST
+   have the attribute <code>xsi:type="dcterms:URI"</code> and have a URI as element text. (See also rule 4.2.)</p>
+</li>
+<li>
+<p>Any <code>dcx-dai:&lt;scheme&gt;</code> elements (i.e. (a) DAI, (b) ISNI or (c) ORCID) MUST contain an identifier that complies with the syntaxis for the selected identifier
+   scheme URI.</p>
+</li>
+<li>
+<p>Any <code>gml:posList</code> elements nested in <code>gml:Polygon</code> elements:</p>
+<ul>
+<li>MUST have an even number of values.</li>
+<li>MUST have at least three different pairs of values, each of which describes one point.</li>
+<li>MUST start and end with the same pair of values.</li>
+</ul>
+</li>
+<li>
+<p>If a <code>gml:MultiSurface</code> is used, all nested <code>gml:Polygon</code> MUST have the same <code>srsName</code> attribute.</p>
+</li>
+<li>
+<p>Any <code>gml:Point/gml:pos</code> (pos nested in a Point), <code>gml:lowerCorner</code> and <code>gml:upperCorner</code> elements MUST have at least two values. These values MUST be
+   numeric. In case the <code>srsName</code> specifies the <a href="https://www.opengis.net/def/crs/EPSG/0/28992" target="_blank">RD</a> scheme the values MUST be within the valid range.</p>
+</li>
+<li>
+<p>Any <code>dc:identifier</code> or <code>dcterms:identifier</code> element with attribute <code>xsi:type="id-type:ARCHIS-ZAAK-IDENTIFICATIE</code> MUST have a value of 10 or fewer characters.</p>
+</li>
+<li>
+<p>All URLs used in <code>metadata/dataset.xml</code> MUST be valid URLs with protocol <code>http</code> or <code>https</code>.</p>
+</li>
+<li>
+<p>The file <code>metadata/dataset.xml</code> MUST have one or more rights holders, each in a <code>&lt;dcterms:rightsHolder&gt;</code> element as a child of the <code>dcmiMetadata</code> element.</p>
+</li>
+<li>
+<p><code>dcx-dai:author</code> and <code>dcx-dai:organization</code> elements MUST NOT have the role <code>RightsHolder</code>.</p>
+</li>
+<li>
+<p>The following elements, if present, MUST have exactly one of the attributes <code>valueURI</code> or <code>valueCode</code> (and MUST NOT have both).</p>
+<ul>
+<li><code>ddm:reportNumber</code></li>
+<li><code>ddm:acquisitionMethod</code></li>
+<li><code>ddm:subject</code></li>
+<li><code>ddm:temporal</code></li>
+</ul>
+</li>
+<li>
+<p>(a) For the <code>schemeURI</code> listed below, the value of a <code>valueURI</code> attribute MUST be a term URI that is part of the controlled vocabulary specified in the <code>schemeURI</code> attribute of the same element.
+    This is validated against the version currently hosted by the <a href="https://vocabs.datastations.nl/" target="_blank">DANS controlled vocabulary service</a>. (b) If a <code>valueCode</code> attribute is used, it MUST 
+    correspond to a valid term in the controlled vocabulary.</p>
+<p>This rule applies to the following schemeURIs:</p>
+<ul>
+<li><code>https://data.cultureelerfgoed.nl/term/id/rn/a4a7933c-e096-4bcf-a921-4f70a78749fe</code> (ABR)</li>
+<li><code>https://data.cultureelerfgoed.nl/term/id/abr/b6df7840-67bf-48bd-aa56-7ee39435d2ed</code> (ABR)</li>
+<li><code>https://data.cultureelerfgoed.nl/term/id/abr/e9546020-4b28-4819-b0c2-29e7c864c5c0</code> (ABR Complextypen)</li>
+<li><code>https://data.cultureelerfgoed.nl/term/id/abr/22cbb070-6542-48f0-8afe-7d98d398cc0b</code> (ABR Artefacten)</li>
+<li><code>https://data.cultureelerfgoed.nl/term/id/abr/9b688754-1315-484b-9c89-8817e87c1e84</code> (ABR Periodes)</li>
+<li><code>https://data.cultureelerfgoed.nl/term/id/abr/7a99aaba-c1e7-49a4-9dd8-d295dbcc870e</code> (ABR Rapporttypes)</li>
+<li><code>https://data.cultureelerfgoed.nl/term/id/abr/554ca1ec-3ed8-42d3-ae4b-47bcb848b238</code> (ABR Verwervingswijzen)</li>
+<li><code>https://vocabularies.dans.knaw.nl/collections/</code> (DANS Collections)</li>
+<li><code>http://vocab.getty.edu/aat/</code> (Getty AAT)</li>
+</ul>
+</li>
+</ol>
+<h4 id="32-metadatafilesxml">3.2 <code>metadata/files.xml</code><a class="headerlink" href="#32-metadatafilesxml" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>The file <code>metadata/files.xml</code> MUST adhere to <a href="https://raw.githubusercontent.com/DANS-KNAW/dans-schema/master/lib/src/main/resources/bag/metadata/files/files.xsd" target="_blank">DANS bag file metadata schema</a>.</p>
+</li>
+<li>
+<p>Each <code>file</code> element's <code>filepath</code> attribute MUST contain the bag local path to the payload file described. When an <code>original-filepaths.txt</code> exists, rule 3.3.1
+   applies. Directories and non-payload files MUST NOT be described by a <code>file</code> element.</p>
+</li>
+<li>
+<p>There MUST NOT be more than one <code>file</code> element corresponding to a payload file and every payload file MUST be described by a <code>file</code> element.</p>
+</li>
+</ol>
+<h4 id="33-original-filepathstxt">3.3 <code>original-filepaths.txt</code><a class="headerlink" href="#33-original-filepathstxt" title="Permanent link">&para;</a></h4>
+<ol>
+<li>The purpose of <code>original-filepaths.txt</code> is to provide a complete mapping from renamed files back to their original full path (including filename). It MUST be
+   a text file encoded with UTF-8.</li>
+<li>
+<p>The lines of <code>original-filepaths.txt</code> MUST be formatted as <code>&lt;physical-bag-relative-path&gt;&lt;whitespace&gt;&lt;original-bag-relative-path&gt;</code>, where</p>
+<ul>
+<li><code>&lt;physical-bag-relative-path&gt;</code> MUST NOT contain whitespace.</li>
+<li><code>&lt;physical-bag-relative-path&gt;</code> MUST correspond one-to-one to an existing payload file.</li>
+<li><code>&lt;original-bag-relative-path&gt;</code> MUST correspond one-to-one to a <code>filepath</code> attribute in the <code>file</code> elements in
+  the <code>files.xml</code>.</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-data-station-context-requirements">4 Data Station context requirements<a class="headerlink" href="#4-data-station-context-requirements" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>If <code>bag-info.txt</code> contains the element <code>Is-Version-Of</code> there MUST be a dataset in the target Data Station with the following properties: (a) it has
+   a <code>dansSwordToken</code> with the same value as <code>Is-Version-Of</code> (b) it has a <code>dansOtherId</code> with the same value as <code>bag-info.txt</code>'s
+   <code>Has-Organizational-Identifier</code> (or both are absent).</p>
+</li>
+<li>
+<p>The <code>metadata/dataset.xml</code> element <code>dcmiMetadata/dcterms:license</code> with attribute <code>xsi:type="dcterms:URI"</code> (see 3.1.2)  must be one of the licenses supported
+   by the target Data Station.</p>
+</li>
+<li>
+<p>The date in <code>metadata/dataset.xml</code> element <code>profile/available</code> MUST NOT be further in the future than the limit set on embargoes in the target Data Station.</p>
+</li>
+<li>
+<p>The bag MUST NOT contain a payload file <code>data/original-metadata.zip</code>.</p>
+</li>
+</ol>
+<h3 id="5-vault-as-a-service-context-requirements">5 Vault as a Service context requirements<a class="headerlink" href="#5-vault-as-a-service-context-requirements" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>If <code>bag-info.txt</code> contains the element <code>Is-Version-Of</code> there MUST be a dataset in the Vault that has a <code>dansSwordToken</code> with the same value as
+   <code>Is-Version-Of</code>.</p>
+</li>
+<li>
+<p>(a) The file <code>metadata/dataset.xml</code> MAY contain at most one <code>dcterms:identifier</code> element with an attribute <code>xsi:type="id-type:DOI"</code>.
+   (b) If present, the text of this element MUST be a syntactically valid <a href="https://www.doi.org/" target="_blank">DOI</a> identifier which SHOULD be resolvable.</p>
+</li>
+</ol>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.rfc-editor.org/rfc/rfc8493" target="_blank">BagIt</a> - packaging format on which the DANS Data Station ingest process is based</li>
+<li><a href="https://raw.githubusercontent.com/DANS-KNAW/dans-schema/master/lib/src/main/resources/bag/metadata/files/files.xsd" target="_blank">DANS bag file metadata schema</a> - schema for content file specific metadata</li>
+<li><a href="https://raw.githubusercontent.com/DANS-KNAW/dans-schema/master/lib/src/main/resources/md/ddm/v2/ddm.xsd" target="_blank">DANS dataset metadata schema</a> - schema for dataset level metadata</li>
+<li><a href="https://raw.githubusercontent.com/DANS-KNAW/dans-schema/master/lib/src/main/resources/vocab/identifier-type.xsd" target="_blank">DANS controlled list of dcterms:identifier types</a> - list of valid values for <code>xsi:id-type</code></li>
+<li><a href="https://raw.githubusercontent.com/DANS-KNAW/dans-schema/master/lib/src/main/resources/dcx/dcx-dai.xsd" target="_blank">DANS DCTERMS extension: Digital Author Identifier</a> - extensions to accommodate Digital Author
+  Identifiers</li>
+<li><a href="https://raw.githubusercontent.com/DANS-KNAW/dans-schema/master/lib/src/main/resources/dcx/dcx-gml.xsd" target="_blank">DANS DCTERMS extension: Geography Markup Language</a> - extensions to accommodate Geography Markup
+  Language</li>
+<li><a href="http://purl.org/dc/elements/1.1/" target="_blank">DC</a> - Dublin Core metadata elements</li>
+<li><a href="http://www.dublincore.org/documents/dcmi-terms/" target="_blank">DCTERMS</a> - metadata schema from which elements are used in several DANS metadata schemas</li>
+<li><a href="https://www.doi.org/" target="_blank">DOI</a> - Digital Object Identifier</li>
+<li><a href="https://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsf.xsd" target="_blank">GML 3.1.1 Simplified Features profile Levels 0 and 1</a> - Profile of Geography Mark-up Language</li>
+<li><a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a> - standard for formatting dates and times</li>
+<li><a href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank">Media Type</a> - identifiers for file formats</li>
+<li><a href="https://public.ccsds.org/pubs/650x0m2.pdf" target="_blank">OAIS Reference Model</a> - reference model for long term preservation archives</li>
+<li><a href="https://www.ietf.org/rfc/rfc2119.txt" target="_blank">RFC 2119</a> - specification for use of requirement level keywords</li>
+<li><a href="https://www.opengis.net/def/crs/EPSG/0/28992" target="_blank">RD</a> - <em>Stelsel van de Rijksdriehoeksmeting</em>, a scheme for geographical locations</li>
+<li><a href="https://en.wikipedia.org/wiki/Universally_unique_identifier" target="_blank">urn:uuid</a> - URN scheme for <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier" target="_blank">UUID</a>s</li>
+<li><a href="https://www.kb.nl/organisatie/onderzoek-expertise/informatie-infrastructuur-diensten-voor-bibliotheken/registration-agency-nbn" target="_blank">urn:NBN</a> - URN scheme for National Bibliographic Numbers</li>
+<li><a href="https://en.wikipedia.org/wiki/Universally_unique_identifier" target="_blank">UUID</a> - universally unique identifiers</li>
+<li><a href="https://www.w3.org/TR/xmlschema-1/" target="_blank">XML Schema</a> - constraint language for specifying types of XML documents</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../.." class="btn btn-neutral float-left" title="Welcome"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../0.0.0/" class="btn btn-neutral float-right" title="v0.0.0-DEPRECATED">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/DANS-KNAW/dans-bagit-profile" class="fa fa-code-fork" style="color: #fcfcfc"> DANS-KNAW/dans-bagit-profile</a>
+        </span>
+    
+    
+      <span><a href="../.." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../0.0.0/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
